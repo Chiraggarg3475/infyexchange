@@ -1,6 +1,9 @@
+import Link from "next/link";
 import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import { OnboardingForm } from "@/components/auth/OnboardingForm";
+import { ThemeToggle } from "@/components/shared/ThemeToggle";
+import { PriceTag } from "@/components/shared/PriceTag";
 import { signOutAction } from "@/lib/actions/auth";
 import { Button } from "@/components/ui/button";
 
@@ -47,11 +50,35 @@ export default async function OnboardingPage() {
   }
 
   return (
-    <main className="flex min-h-dvh flex-col items-center justify-center p-6">
-      <div className="w-full max-w-md rounded-2xl border border-border bg-card p-6 sm:p-8">
-        <div className="mb-6 flex items-start justify-between gap-4">
-          <div className="space-y-1">
-            <h1 className="text-2xl font-bold tracking-tight">
+    <div className="flex min-h-dvh flex-col bg-background">
+      <header className="border-b border-border bg-background/95">
+        <div className="mx-auto flex h-16 max-w-[1200px] items-center justify-between px-4 sm:px-6">
+          <Link
+            href="/"
+            className="font-display text-xl font-bold tracking-tight text-foreground"
+          >
+            InfyExchange
+          </Link>
+          <div className="flex items-center gap-2">
+            <ThemeToggle />
+            <form action={signOutAction}>
+              <Button
+                type="submit"
+                variant="outline"
+                className="h-11 rounded-xl px-3.5"
+              >
+                Sign out
+              </Button>
+            </form>
+          </div>
+        </div>
+      </header>
+
+      <main className="flex flex-1 flex-col items-center justify-center p-4 sm:p-6">
+        <div className="w-full max-w-md rounded-2xl border border-border bg-card p-6 sm:p-8">
+          <div className="mb-6 space-y-2">
+            <PriceTag kind="sell" customText="Step 1 of 1" size="sm" />
+            <h1 className="font-display text-2xl font-bold tracking-tight text-foreground sm:text-[28px]">
               Complete your campus profile
             </h1>
             <p className="text-sm text-muted-foreground">
@@ -59,15 +86,10 @@ export default async function OnboardingPage() {
               InfyExchange.
             </p>
           </div>
-          <form action={signOutAction}>
-            <Button type="submit" variant="ghost" size="sm">
-              Sign out
-            </Button>
-          </form>
-        </div>
 
-        <OnboardingForm defaultFullName={defaultFullName} />
-      </div>
-    </main>
+          <OnboardingForm defaultFullName={defaultFullName} />
+        </div>
+      </main>
+    </div>
   );
 }
