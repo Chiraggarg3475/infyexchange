@@ -4,6 +4,8 @@ import { AppShell } from "@/components/shell/AppShell";
 import { ListingForm } from "@/components/listings/ListingForm";
 import type { Tables } from "@/types/database";
 
+export const instant = false;
+
 const FALLBACK_CATEGORIES: Tables<"categories">[] = [
   { id: 1, slug: "books-study", name: "Books & Study", sort_order: 1 },
   { id: 2, slug: "electronics", name: "Electronics & Gadgets", sort_order: 2 },

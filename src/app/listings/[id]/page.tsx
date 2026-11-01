@@ -12,6 +12,8 @@ import { PriceTag, formatINR } from "@/components/shared/PriceTag";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import type { ItemCondition } from "@/types/database";
 
+export const instant = false;
+
 const CONDITION_LABELS: Record<ItemCondition, string> = {
   new: "New",
   like_new: "Like new",

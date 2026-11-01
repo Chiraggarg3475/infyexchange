@@ -7,6 +7,8 @@ import { PriceTag } from "@/components/shared/PriceTag";
 import { signOutAction } from "@/lib/actions/auth";
 import { Button } from "@/components/ui/button";
 
+export const instant = false;
+
 export default async function OnboardingPage() {
   let defaultFullName = "";
 

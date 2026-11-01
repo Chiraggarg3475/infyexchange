@@ -3,6 +3,8 @@ import { ADMIN_WHATSAPP } from "@/lib/config";
 import { AppShell } from "@/components/shell/AppShell";
 import { PriceTag } from "@/components/shared/PriceTag";
 
+export const instant = false;
+
 export default function PrivacyPage() {
   const cleanNumber = ADMIN_WHATSAPP.replace(/\D/g, "");
   const adminWaUrl = cleanNumber

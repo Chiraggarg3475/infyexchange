@@ -2,6 +2,8 @@ import Link from "next/link";
 import { AppShell } from "@/components/shell/AppShell";
 import { PriceTag } from "@/components/shared/PriceTag";
 
+export const instant = false;
+
 const PROHIBITED_ITEMS = [
   "Alcohol of any kind",
   "Tobacco, cigarettes, e-cigarettes, or vapes",

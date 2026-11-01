@@ -3,6 +3,8 @@ import { ThemeToggle } from "@/components/shared/ThemeToggle";
 import { PriceTag } from "@/components/shared/PriceTag";
 import { GoogleSignInButton } from "@/components/auth/GoogleSignInButton";
 
+export const instant = false;
+
 interface LoginPageProps {
   searchParams: Promise<{ error?: string }>;
 }

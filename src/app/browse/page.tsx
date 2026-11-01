@@ -5,6 +5,8 @@ import { BrowseFeed } from "@/components/listings/BrowseFeed";
 import type { ListingTileItem } from "@/components/listings/ListingTile";
 import type { Tables } from "@/types/database";
 
+export const instant = false;
+
 const PAGE_SIZE = 20;
 
 const FALLBACK_CATEGORIES: Tables<"categories">[] = [

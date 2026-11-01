@@ -4,6 +4,8 @@ import { AppShell } from "@/components/shell/AppShell";
 import { MyListingsClient } from "@/components/listings/MyListingsClient";
 import type { Tables } from "@/types/database";
 
+export const instant = false;
+
 export default async function MyListingsPage() {
   let myListings: Tables<"listings">[] = [];
 

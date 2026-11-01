@@ -62,7 +62,9 @@ export async function AppShell({ children }: AppShellProps) {
       <main className="mx-auto w-full max-w-[1200px] flex-1 px-4 pt-6 pb-24 sm:px-6 md:pb-12">
         {children}
       </main>
-      <BottomNav />
+      <Suspense fallback={null}>
+        <BottomNav />
+      </Suspense>
     </div>
   );
 }

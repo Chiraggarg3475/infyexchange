@@ -4,6 +4,8 @@ import { AppShell } from "@/components/shell/AppShell";
 import { ListingForm } from "@/components/listings/ListingForm";
 import type { Tables } from "@/types/database";
 
+export const instant = false;
+
 interface EditListingPageProps {
   params: Promise<{ id: string }>;
 }
