@@ -220,8 +220,13 @@ export function MyListingsClient({ initialListings }: MyListingsClientProps) {
                   exit={
                     shouldReduceMotion
                       ? { opacity: 0 }
-                      : { opacity: 0, scale: 0.96, transition: { duration: 0.2 } }
+                      : {
+                          opacity: 0,
+                          scaleY: 0,
+                          transition: { duration: 0.22, ease: "easeInOut" },
+                        }
                   }
+                  style={{ transformOrigin: "top" }}
                   className="flex flex-col gap-4 rounded-2xl border border-border bg-card p-4 sm:flex-row sm:items-center sm:justify-between"
                 >
                   <div className="flex items-start gap-4">

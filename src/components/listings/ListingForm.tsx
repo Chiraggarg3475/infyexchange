@@ -459,9 +459,10 @@ export function ListingForm({
           {kind !== "giveaway" && (
             <motion.div
               key={`pricing-${kind}`}
-              initial={shouldReduceMotion ? false : { opacity: 0, scaleY: 0.95 }}
+              layout={!shouldReduceMotion}
+              initial={shouldReduceMotion ? false : { opacity: 0, scaleY: 0.96 }}
               animate={{ opacity: 1, scaleY: 1 }}
-              exit={{ opacity: 0 }}
+              exit={{ opacity: 0, scaleY: 0.96 }}
               transition={{ duration: shouldReduceMotion ? 0 : 0.18 }}
               style={{ transformOrigin: "top" }}
               className="grid gap-4 sm:grid-cols-3"

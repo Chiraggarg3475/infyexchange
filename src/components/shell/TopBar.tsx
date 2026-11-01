@@ -72,7 +72,7 @@ export function TopBar({
             <Link
               href="/browse"
               className={cn(
-                "inline-flex h-10 items-center rounded-xl px-3.5 text-sm font-medium transition-colors",
+                "inline-flex min-h-11 items-center rounded-xl px-3.5 text-sm font-medium transition-colors",
                 pathname === "/browse"
                   ? "bg-muted text-foreground"
                   : "text-muted-foreground hover:text-foreground"
@@ -83,7 +83,7 @@ export function TopBar({
             <Link
               href="/my"
               className={cn(
-                "inline-flex h-10 items-center rounded-xl px-3.5 text-sm font-medium transition-colors",
+                "inline-flex min-h-11 items-center rounded-xl px-3.5 text-sm font-medium transition-colors",
                 pathname.startsWith("/my")
                   ? "bg-muted text-foreground"
                   : "text-muted-foreground hover:text-foreground"
@@ -163,21 +163,21 @@ export function TopBar({
               <DropdownMenuSeparator />
               <DropdownMenuItem
                 onClick={() => router.push("/browse")}
-                className="min-h-10 cursor-pointer rounded-xl px-2.5"
+                className="min-h-11 cursor-pointer rounded-xl px-2.5"
               >
                 <Compass className="size-4" />
                 <span>Browse listings</span>
               </DropdownMenuItem>
               <DropdownMenuItem
                 onClick={() => router.push("/my")}
-                className="min-h-10 cursor-pointer rounded-xl px-2.5"
+                className="min-h-11 cursor-pointer rounded-xl px-2.5"
               >
                 <Package className="size-4" />
                 <span>My listings</span>
               </DropdownMenuItem>
               <DropdownMenuItem
                 onClick={() => router.push("/rules")}
-                className="min-h-10 cursor-pointer rounded-xl px-2.5"
+                className="min-h-11 cursor-pointer rounded-xl px-2.5"
               >
                 <ShieldCheck className="size-4" />
                 <span>Community rules</span>
@@ -188,7 +188,7 @@ export function TopBar({
                 onClick={() => {
                   void signOutAction();
                 }}
-                className="min-h-10 cursor-pointer rounded-xl px-2.5"
+                className="min-h-11 cursor-pointer rounded-xl px-2.5"
               >
                 <LogOut className="size-4" />
                 <span>Sign out</span>

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Bricolage_Grotesque, Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/shared/ThemeProvider";
 import { Toaster } from "@/components/ui/sonner";
@@ -22,9 +22,22 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "InfyExchange – Campus Swap-Shop",
+  title: {
+    default: "InfyExchange – Campus Swap-Shop",
+    template: "%s | InfyExchange",
+  },
   description:
-    "Buy, sell, borrow or give away right on the Infosys Mysore campus.",
+    "A private campus swap-shop for Infosys Mysore trainees. Buy, sell, borrow or give away items in a minute, then meet in person.",
+  applicationName: "InfyExchange",
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#F3F6F4" },
+    { media: "(prefers-color-scheme: dark)", color: "#08120F" },
+  ],
 };
 
 export default function RootLayout({
@@ -38,7 +51,7 @@ export default function RootLayout({
       suppressHydrationWarning
       className={`${bricolage.variable} ${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="flex min-h-full flex-col bg-background text-foreground">
+      <body className="flex min-h-full flex-col overflow-x-hidden bg-background text-foreground">
         <ThemeProvider>
           {children}
           <Toaster position="top-center" />

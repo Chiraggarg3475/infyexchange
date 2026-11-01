@@ -104,7 +104,7 @@ export function PhotoPicker({
                   type="button"
                   onClick={() => onRemovePhoto(slot.id)}
                   aria-label="Remove photo"
-                  className="absolute top-2 right-2 inline-flex size-8 items-center justify-center rounded-full bg-background/85 text-foreground backdrop-blur-xs transition-colors hover:bg-destructive hover:text-white"
+                  className="absolute top-1.5 right-1.5 inline-flex size-11 items-center justify-center rounded-full bg-background/85 text-foreground backdrop-blur-xs transition-colors hover:bg-destructive hover:text-white"
                 >
                   <X className="size-4" />
                 </button>

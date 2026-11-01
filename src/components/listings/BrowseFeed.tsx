@@ -236,7 +236,7 @@ export function BrowseFeed({
             type="button"
             onClick={() => setCategoryFilter(null)}
             className={cn(
-              "inline-flex min-h-9 shrink-0 items-center rounded-full border px-3.5 py-1.5 text-xs font-medium transition-colors",
+              "inline-flex min-h-11 shrink-0 items-center rounded-full border px-4 py-2 text-xs font-medium transition-colors",
               categoryFilter === null
                 ? "border-primary bg-primary/12 text-foreground"
                 : "border-border bg-card text-muted-foreground hover:text-foreground"
@@ -254,7 +254,7 @@ export function BrowseFeed({
                   setCategoryFilter((prev) => (prev === cat.id ? null : cat.id))
                 }
                 className={cn(
-                  "inline-flex min-h-9 shrink-0 items-center rounded-full border px-3.5 py-1.5 text-xs font-medium transition-colors",
+                  "inline-flex min-h-11 shrink-0 items-center rounded-full border px-4 py-2 text-xs font-medium transition-colors",
                   active
                     ? "border-primary bg-primary/12 text-foreground"
                     : "border-border bg-card text-muted-foreground hover:text-foreground"

@@ -126,7 +126,7 @@ export function Gallery({ imagePaths, title, kind }: GalleryProps) {
                 aria-selected={active}
                 aria-label={`Show photo ${idx + 1}`}
                 onClick={() => setActiveIndex(idx)}
-                className="inline-flex min-h-6 items-center justify-center px-1"
+                className="inline-flex min-h-11 min-w-11 items-center justify-center px-1"
               >
                 <span
                   className={cn(
